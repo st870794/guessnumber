@@ -5,7 +5,9 @@
 import random
 
 r = random.randint(1,100)
+count = 0
 while True:
+	count += 1 # count =count + 1 快捷法
 	num = input('請猜數字:')
 	num = int(num)
 	if num > r:
@@ -13,5 +15,6 @@ while True:
 	elif num < r:
 		print('猜得比正確數字小喔~')
 	else:
-		print('終於猜對了!')
+		print('終於猜對了!居然猜了',count,'次')
 		break
+	print('這是你猜的第', count, '次')	
